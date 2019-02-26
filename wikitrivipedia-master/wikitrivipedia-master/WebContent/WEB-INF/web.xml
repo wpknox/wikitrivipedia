@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:web="http://xmlns.jcp.org/xml/ns/javaee">
+  <display-name>WikiTrivia</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+    <servlet-name>QuestionForm</servlet-name>
+    <servlet-class>servlets.Questions</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>Correct</servlet-name>
+    <servlet-class>servlets.Success</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>Failure</servlet-name>
+    <servlet-class>servlets.Fail</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>QuestionForm</servlet-name>
+    <url-pattern>/question</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>Correct</servlet-name>
+    <url-pattern>/response</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>Failure</servlet-name>
+    <url-pattern>/badresponse</url-pattern>
+  </servlet-mapping>
+  </web-app>
+   
