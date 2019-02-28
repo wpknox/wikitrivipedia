@@ -15,7 +15,6 @@ public class JOptionTesting {
 	private AudioStream audio;
 	private InputStream music;
 	private Question nextStore;
-	//TODO
 
 	public JOptionTesting() {
 		boolean fail = false;
@@ -25,11 +24,11 @@ public class JOptionTesting {
 		audio = null;
 		music = null;
 		
-		//TODO
+		
 		nextStore = new Question(); 
-
+		/* All videos work best when they are .wav files */
 		try {
-			music = new FileInputStream(new File("C:\\Users\\Jack\\eclipse-workspace\\wikipediaDay\\src\\JOptionFrameMessing\\GmeShow.wav"));
+			music = new FileInputStream(new File("Enter directory here"));
 			AudioStream audios = new AudioStream(music);
 			AudioPlayer.player.start(audios);
 			audio = audios;
@@ -54,12 +53,12 @@ public class JOptionTesting {
 					break;
 				}
 			}
-
-			ImageIcon icon = new ImageIcon(JOptionTesting.class.getResource("Squirrel-X_1_1.png"));
+				/* All images work best when they are .png files */
+			ImageIcon icon = new ImageIcon(JOptionTesting.class.getResource("YOUR_IMAGE_0.png")); //Logo for icon
 			
-			ImageIcon icon2 = new ImageIcon(JOptionTesting.class.getResource("frowny.png"));
+			ImageIcon icon2 = new ImageIcon(JOptionTesting.class.getResource("YOUR_IMAGE_1.png"));
 			
-			ImageIcon icon3 = new ImageIcon(JOptionTesting.class.getResource("PogChamp_20.png"));
+			ImageIcon icon3 = new ImageIcon(JOptionTesting.class.getResource("YOUR_IMAGE_2.png"));
 
 			int optionClicked = JOptionPane.showOptionDialog(myFrame, questionText, "WikiTrivia v.1",
 					JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, icon, opt, null);
@@ -93,7 +92,6 @@ public class JOptionTesting {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		new JOptionTesting();
 	}
 
